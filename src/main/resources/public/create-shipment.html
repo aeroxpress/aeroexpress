@@ -46,16 +46,7 @@
     <!-- TITLE -->
     <title>Aero Xpress Shipment - Logistic Delivery Service</title>
 
-    <link
-      rel="stylesheet"
-      href="https://code.jivosite.com/css/383d382/widget.css"
-      class="jv-css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://code.jivosite.com/css/383d382/omnichannelMenu.widget.css"
-    />
+    
     <style>
       * {
         font-family: Arial, Helvetica, sans-serif;
@@ -67,12 +58,12 @@
       id="page-spinner"
       style="display: none; justify-content: center; align-items: center"
     >
-    <div
-      class="fa fa-spinner fa-spin"
-      style="font-size: 40px; margin-top: 45vh;"
-    ></div>
-  </div>
-    <div id="page-content" style="display: block;">
+      <div
+        class="fa fa-spinner fa-spin"
+        style="font-size: 40px; margin-top: 45vh"
+      ></div>
+    </div>
+    <div id="page-content" style="display: block">
       <header class="header-area">
         <!-- Start Top Header Area -->
         <div class="top-header">
@@ -229,7 +220,7 @@
             color: white;
           "
         >
-          <p style="margin: 0px; font-size: 24px; font-weight: 600">
+          <p id="shipment-action" style="margin: 0px; font-size: 24px; font-weight: 600">
             Create Shipments
           </p>
           <img src="./assets/img/separater.png" alt="" />
@@ -368,9 +359,10 @@
               </div>
             </div>
 
-            <div id="shipment-track" style="font-size: 12px; margin: 32px 0px">
-            
-            </div>
+            <div
+              id="shipment-track"
+              style="font-size: 12px; margin: 32px 0px"
+            ></div>
             <div
               id="add-track"
               class="w3-button"
@@ -396,19 +388,14 @@
             </div>
             <p style="font-size: 24px; margin: 32px 0px 8px">
               Waybill:
-              <span id="" style="font-weight: 600; color: rgb(210, 58, 15)">
+              <span
+                id="tracking-no-2"
+                style="font-weight: 600; color: rgb(210, 58, 15)"
+              >
               </span>
             </p>
           </div>
           <div>
-            <div style="padding: 8px 0px">
-              <input
-                id="tracking-no"
-                class="w3-input"
-                type="text"
-                placeholder="Waybill"
-              />
-            </div>
             <div style="padding: 8px 0px">
               <input
                 id="delivery-date"
@@ -509,7 +496,7 @@
               />
             </div>
           </div>
-
+          <div id="create-shipment-container">
           <div
             id="create-shipment"
             class="w3-button"
@@ -521,6 +508,45 @@
             "
           >
             Create Shipment
+          </div>
+        </div>
+          <div id="update-shipment-container" style="display: none;">
+            <div>
+              <div class="w3-row">
+                <div class="w3-col s6">
+                  <div style="padding: 0px 8px">
+                    <div
+                      id="update-shipment"
+                      class="w3-button"
+                      style="
+                        background-color: rgb(210, 58, 15);
+                        color: white;
+                        width: 100%;
+                        margin: 16px 0px;
+                      "
+                    >
+                      Update Shipment
+                    </div>
+                  </div>
+                </div>
+                <div class="w3-col s6">
+                  <div style="padding: 0px 8px">
+                    <div
+                      id="delete-shipment"
+                      class="w3-button"
+                      style="
+                        border: 1px solid rgb(46, 46, 46);
+                        color: rgb(47, 47, 47);
+                        width: 100%;
+                        margin: 16px 0px;
+                      "
+                    >
+                      Delete Shipment
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -634,6 +660,6 @@
     <!-- Custom JS -->
     <script src="/assets/js/custom.js"></script>
 
-    <script src="//code.jivosite.com/widget/2BkwTgbDUA" async=""></script>
+    
   </body>
 </html>

@@ -28,4 +28,8 @@ public class ShipmentTrackService {
 		}
 		return newShipmentTracks;
 	}
+	
+	public void deleteShipmentTrack(int shipmentTrackId) {
+		shipmentTrackRepository.deleteById(shipmentTrackId);
+	}
 }

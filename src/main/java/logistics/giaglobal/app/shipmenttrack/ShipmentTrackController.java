@@ -25,5 +25,10 @@ public class ShipmentTrackController {
 	public List<ShipmentTrack> getShipmentTracksByShipment(@PathVariable String shipmentId) {
 		return (List<ShipmentTrack>) shipmentTrackService.getShipmentTracksByShipment(shipmentId);
 	}
+	
+	@RequestMapping(method = RequestMethod.DELETE, value = "/shipmenttrack/{shipmentTrackId}/delete")
+	public void deleteShipmentTrack(@PathVariable int shipmentTrackId) {
+		shipmentTrackService.deleteShipmentTrack(shipmentTrackId);
+	}
 
 }
