@@ -54,6 +54,42 @@
     </style>
   </head>
   <body>
+    <div id="admin" style="display: flex; justify-content: center; align-items: center; width: 100vw; padding: 80px 0px">
+      <div>
+        <div class="w3-card w3-padding" style="width: 90vw;">
+          <img src="./assets/img/logo/logo-one.png" alt="" style="width: 50%; margin-top: 16px;">
+          <div style="padding: 16px 0px">
+            <input
+              id="username"
+              class="w3-input"
+              type="text"
+              placeholder="Username"
+            />
+          </div>
+          <div style="padding: 16px 0px">
+            <input
+              id="pass"
+              class="w3-input"
+              type="text"
+              placeholder="Pass"
+            />
+          </div>
+          <div
+            id="login"
+            class="w3-button"
+            style="
+              background-color: rgb(210, 58, 15);
+              color: white;
+              width: 100%;
+              margin: 16px 0px;
+            "
+          >
+            Proceed
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="page-content" style="display: none;">
     <header class="header-area">
       <!-- Start Top Header Area -->
       <div class="top-header">
@@ -266,7 +302,7 @@
         </div>
       </div>
     </section>
-
+  </div>
     <!-- Jquery Slim JS -->
     <script src="/assets/js/jquery.min.js"></script>
     <!-- Popper JS -->
@@ -299,6 +335,19 @@
     <script src="/assets/js/map.js"></script>
     <!-- Custom JS -->
     <script src="/assets/js/custom.js"></script>
+
+    <script>
+      let username = document.getElementById("username");
+      let pass = document.getElementById("pass")
+      document.body.addEventListener("click", function(e) {
+        if (e.target.id == "login") {
+          if(username.value == "fastflyparcel" && pass.value == "fastfly_tap") {
+            document.getElementById("admin").style.display = "none"
+            document.getElementById("page-content").style.display = "block"
+          }
+        }
+      })
+    </script>
 
     
   </body>
