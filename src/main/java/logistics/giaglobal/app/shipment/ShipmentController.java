@@ -25,8 +25,8 @@ public class ShipmentController {
 	@CrossOrigin(maxAge = 3600)
 	@RequestMapping(method = RequestMethod.POST, value = "/shipment")
 	public Shipment addShipment(@RequestBody Shipment shipment) {
-		// String shipmentId = "AER" + new Random().nextInt(100000) + "LX";
-		String shipmentId = "AER386LX";
+		String shipmentId = "AER" + new Random().nextInt(100000) + "LX";
+		// String shipmentId = "AER386LX";
 		shipment.setShipmentId(shipmentId);
 		System.out.println(shipmentId);
 		return shipmentService.addShipment(shipment);
